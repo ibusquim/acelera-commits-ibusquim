@@ -1,0 +1,137 @@
+:root {
+  --fundo: #0b1020;
+  --cartao: #151c33;
+  --borda: #26304f;
+  --texto: #e8ecf8;
+  --texto-suave: #9aa5c4;
+  --destaque: #7c9cff;
+  --ok: #4ade80;
+  --alerta: #fbbf24;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a2346, var(--fundo) 60%);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.cabecalho {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 16px 24px;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.cabecalho__sobretitulo {
+  margin: 0;
+  color: var(--destaque);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cabecalho__mensagem {
+  margin: 8px 0 0;
+  color: var(--texto-suave);
+}
+
+.painel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+.cartao {
+  padding: 20px;
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+}
+
+.cartao--largo {
+  grid-column: 1 / -1;
+}
+
+.cartao h2 {
+  margin: 0 0 8px;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.destaque {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.destaque--rota {
+  font-size: 1.25rem;
+}
+
+.destaque[data-estado='ok'] {
+  color: var(--ok);
+}
+
+.destaque[data-estado='alerta'] {
+  color: var(--alerta);
+}
+
+.detalhe {
+  margin: 8px 0 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.barra {
+  height: 8px;
+  margin-top: 12px;
+  overflow: hidden;
+  background: var(--borda);
+  border-radius: 999px;
+}
+
+.barra__nivel {
+  width: 0;
+  height: 100%;
+  background: var(--destaque);
+  transition: width 0.4s ease;
+}
+
+.tripulacao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tripulacao li {
+  padding: 4px 12px;
+  background: var(--borda);
+  border-radius: 999px;
+}
+
+.aviso {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  color: var(--alerta);
+}

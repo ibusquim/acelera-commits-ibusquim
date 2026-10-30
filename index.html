@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Painel de bordo · AceleraOne</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <p class="cabecalho__sobretitulo">Nave AceleraOne</p>
+      <h1>Painel de bordo</h1>
+      <p id="mensagem-ada" class="cabecalho__mensagem">Carregando os instrumentos...</p>
+    </header>
+
+    <main class="painel">
+      <section class="cartao" aria-labelledby="titulo-decolagem">
+        <h2 id="titulo-decolagem">Decolagem</h2>
+        <p id="decolagem" class="destaque">...</p>
+      </section>
+
+      <section class="cartao" aria-labelledby="titulo-combustivel">
+        <h2 id="titulo-combustivel">Combustível</h2>
+        <p id="combustivel-percentual" class="destaque">...</p>
+        <div class="barra" aria-hidden="true"><div id="combustivel-barra" class="barra__nivel"></div></div>
+        <p id="combustivel-detalhe" class="detalhe"></p>
+      </section>
+
+      <section class="cartao" aria-labelledby="titulo-motor">
+        <h2 id="titulo-motor">Motor</h2>
+        <p id="motor-status" class="destaque">...</p>
+        <p id="motor-temperatura" class="detalhe"></p>
+      </section>
+
+      <section class="cartao cartao--largo" aria-labelledby="titulo-rota">
+        <h2 id="titulo-rota">Rota</h2>
+        <p id="rota" class="destaque destaque--rota">...</p>
+        <p id="rota-detalhe" class="detalhe"></p>
+      </section>
+
+      <section class="cartao cartao--largo" aria-labelledby="titulo-tripulacao">
+        <h2 id="titulo-tripulacao">Tripulação a bordo</h2>
+        <ul id="tripulacao" class="tripulacao"></ul>
+      </section>
+    </main>
+
+    <noscript>
+      <p class="aviso">O painel precisa de JavaScript ligado para ler os instrumentos.</p>
+    </noscript>
+
+    <script type="module" src="src/painel.js"></script>
+  </body>
+</html>

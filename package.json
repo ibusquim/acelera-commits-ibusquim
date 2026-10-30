@@ -1,0 +1,15 @@
+{
+  "name": "acelera-commits-desafio",
+  "version": "1.0.0",
+  "description": "Painel de bordo da nave AceleraOne: o repositório de desafio do Acelera Commits.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node servidor.js",
+    "test": "node --test"
+  }
+}
