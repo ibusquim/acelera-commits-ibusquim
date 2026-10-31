@@ -17,7 +17,7 @@ const nave = {
   combustivel: 42000,
   capacidadeDoTanque: 50000,
   consumoPorKm: 0.01,
-  temperaturaMotor: 64,
+  temperaturaMotor: 55,
   escotilhasFechadas: true,
   tripulacao: ['Comandante Ada', 'Byte'],
   rota: [
