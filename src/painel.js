@@ -14,7 +14,7 @@ import {
 
 const nave = {
   posicaoAtual: 'Terra',
-  combustivel: 46000,
+  combustivel: 70000,
   capacidadeDoTanque: 50000,
   consumoPorKm: 0.01,
   temperaturaMotor: 64,
